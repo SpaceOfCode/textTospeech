@@ -1,0 +1,24 @@
+import pyttsx3
+import pygame
+
+def generate_audio(text, output_file):
+    engine = pyttsx3.init()
+    engine.save_to_file(text, output_file)
+    engine.runAndWait()
+
+def play_audio(file_path):
+    pygame.mixer.init()
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
+
+# Specify the text to be converted to audio
+text = "Hello, this is a test audio."
+
+# Specify the path for the output audio file
+output_file = "output_audio.mp3"
+
+# Generate the audio file from the text
+generate_audio(text, output_file)
+
+# Play the audio file
+play_audio(output_file)
