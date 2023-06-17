@@ -58,7 +58,7 @@ def play_gif():
 gif_lb=Label(main_frame)
 gif_lb.pack()
 
-extract_gif("C:\programming\python\mj project\\ttsproject1\projectGIF.gif")
+extract_gif("C:\programming\python\mj project\TextTospeech\projectGIF.gif")
 play_gif()
 
 
@@ -74,7 +74,7 @@ root.configure(bg="light blue")
 
 #icon
 #root.wm_iconbitmap("online-ads-report-icon.png")
-image_icon=PhotoImage(file="C:\programming\python\mj project\\ttsproject1\online-ads-report-icon.png")
+image_icon=PhotoImage(file="C:\programming\python\mj project\TextTospeech\online-ads-report-icon.png")
 root.iconphoto(False,image_icon)
 
 
@@ -210,7 +210,7 @@ def home_page():
 
     global imageicon
     global imageicon2
-    imageicon=Image.open("C:\programming\python\mj project\\ttsproject1\\affiliate-marketing-icon.png")
+    imageicon=Image.open("C:\programming\python\mj project\\TextTospeech\\affiliate-marketing-icon.png")
     imageicon=imageicon.resize((50,50))
     imageicon2=ImageTk.PhotoImage(imageicon)
     btn=Button(main_frame,text="Speak",image=imageicon2,width=170,compound=LEFT,bg="green",font="Helvetica 15 bold",relief=GROOVE,command=speaknow)
@@ -219,7 +219,7 @@ def home_page():
     #download button image
     global imageicon3
     global imageicon4
-    imageicon3=Image.open("C:\programming\python\mj project\\ttsproject1\download-install-line-icon.png")
+    imageicon3=Image.open("C:\programming\python\mj project\\TextTospeech\download-install-line-icon.png")
     imageicon3=imageicon3.resize((50,50))
     imageicon4=ImageTk.PhotoImage(imageicon3)
     btnsavee=Button(main_frame,text="Download",image=imageicon4,width=170,compound=LEFT,bg="blue",font="Helvetica 15 bold",relief=GROOVE,command=download)
@@ -252,7 +252,7 @@ def home_page():
     
 
 
-def handwritten_page():
+def audiob_page():
     global main_frame
     global root
     global file_path
@@ -386,8 +386,8 @@ def handwritten_page():
                     page = pdf_reader.pages[page_number]
                     text = page.extract_text()
                     tts = gTTS(text,lang='hi')
-                    if os.path.exists('ttsproject1\\text.mp3'):
-                        os.remove('ttsproject1\\text.mp3')
+                    if os.path.exists('text.mp3'):
+                        os.remove('text.mp3')
                         tts.save('text.mp3')
                         file.close()
                     else:
@@ -398,23 +398,23 @@ def handwritten_page():
    
     # opening icon images
     global playicon
-    playicon=Image.open("C:\programming\python\mj project\\ttsproject1\play.png")
+    playicon=Image.open("C:\programming\python\mj project\TextTospeech\play.png")
     playicon=playicon.resize((50,50))
     playicon=ImageTk.PhotoImage(playicon)
     global pauseicon
-    pauseicon=Image.open("C:\programming\python\mj project\\ttsproject1\pause.png")
+    pauseicon=Image.open("C:\programming\python\mj project\TextTospeech\pause.png")
     pauseicon=pauseicon.resize((50,50))
     pauseicon=ImageTk.PhotoImage(pauseicon)
     global stopicon
-    stopicon=Image.open("C:\programming\python\mj project\\ttsproject1\stop-button.png")
+    stopicon=Image.open("C:\programming\python\mj project\TextTospeech\stop-button.png")
     stopicon=stopicon.resize((50,50))
     stopicon=ImageTk.PhotoImage(stopicon)
     global converticon
-    converticon=Image.open("C:\programming\python\mj project\\ttsproject1\convert.png")
+    converticon=Image.open("C:\programming\python\mj project\TextTospeech\convert.png")
     converticon=converticon.resize((50,50))
     converticon=ImageTk.PhotoImage(converticon)
     global openicon
-    openicon=Image.open("C:\programming\python\mj project\\ttsproject1\\folder.png")
+    openicon=Image.open("C:\programming\python\mj project\\TextTospeech\\folder.png")
     openicon=openicon.resize((50,50))
     openicon=ImageTk.PhotoImage(openicon)
     #
@@ -450,7 +450,7 @@ def handwritten_page():
     #
 
 
-def login_page():
+def Ocr_page():
     global main_frames
     global root
     global file_path
@@ -476,7 +476,7 @@ def login_page():
         pygame.mixer.quit()
         text_area.delete('1.0','end')
     #
-    # read the pdf file
+    # read the ocr  file
     def audioRead(text_area):
         global file_path
         global imageText
@@ -486,8 +486,8 @@ def login_page():
             text_area.delete('1.0','end')
             text_area.insert("1.0",text)
             tts = gTTS(text,lang='hi')
-            if os.path.exists('ttsproject1\\text.mp3'):
-                os.remove('ttsproject1\\text.mp3')
+            if os.path.exists('text.mp3'):
+                os.remove('text.mp3')
                 tts.save('text1.mp3')
             else:
                 tts.save('text1.mp3')
@@ -496,19 +496,19 @@ def login_page():
                     
     # opening icon images
     global playicon
-    playicon=Image.open("C:\programming\python\mj project\\ttsproject1\play.png")
+    playicon=Image.open("C:\programming\python\mj project\\TextTospeech\play.png")
     playicon=playicon.resize((50,50))
     playicon=ImageTk.PhotoImage(playicon)
     global pauseicon
-    pauseicon=Image.open("C:\programming\python\mj project\\ttsproject1\stop-button.png")
+    pauseicon=Image.open("C:\programming\python\mj project\\TextTospeech\stop-button.png")
     pauseicon=pauseicon.resize((50,50))
     pauseicon=ImageTk.PhotoImage(pauseicon)
     global converticon
-    converticon=Image.open("C:\programming\python\mj project\\ttsproject1\convert.png")
+    converticon=Image.open("C:\programming\python\mj project\\TextTospeech\convert.png")
     converticon=converticon.resize((50,50))
     converticon=ImageTk.PhotoImage(converticon)
     global openicon
-    openicon=Image.open("C:\programming\python\mj project\\ttsproject1\\folder.png")
+    openicon=Image.open("C:\programming\python\mj project\\TextTospeech\\folder.png")
     openicon=openicon.resize((50,50))
     openicon=ImageTk.PhotoImage(openicon)
     #
@@ -518,15 +518,15 @@ def login_page():
     toggle_menu_frame.lift()
     main_frame.propagate(False)
     lb=Label(main_frame,text="OCR to speech",font="Helvetica 25 bold",fg='blue',bg='white',bd=2,relief='solid')
-    lb.place(x=550,y=40)
-    button =Button(main_frame, text="open pdf file",image=openicon,compound=LEFT, command=open_pdf_file,bd=2,relief='solid',font='Helvetica 20',bg='yellow')
+    lb.place(x=680,y=40)
+    button =Button(main_frame, text="open image",image=openicon,compound=LEFT, command=open_pdf_file,bd=2,relief='solid',font='Helvetica 20',bg='yellow')
     button.place(x=510,y=199)
     read=Button(main_frame, text="convert", image=converticon,compound=LEFT,command=lambda:audioRead(text_area),bd=2,relief='solid',font='Helvetica 20',bg='blue')
     read.place(x=950,y=200)
     play=Button(main_frame,image=playicon,command=play_audio,bd=2,relief='solid',font='Helvetica 10',bg='green')
-    play.place(x=700,y=300)
+    play.place(x=780,y=300)
     stop=Button(main_frame,image=pauseicon,command=stop_audio,bd=2,relief='solid',font='Helvetica 20',bg='red')
-    stop.place(x=800,y=300)
+    stop.place(x=900,y=300)
     text_area=Text(main_frame,font="Helvetica 10",bg="white",relief=GROOVE,wrap=WORD,)
     text_area.place(x=600,y=400,width=600,height=300)
 
@@ -539,8 +539,15 @@ def contact_page():
     main_frame.place(x=0,y=40,height=950,width=2000)
     toggle_menu_frame.lift()
     main_frame.propagate(False)
-    lb=Label(main_frame,text="Contact the developers",font="Helvetica 25 bold")
-    lb.pack()
+    # text that is going to be inserted
+    text="Anumpama Ghosh-: contact me on ghoshanupama524@gmail.com\n\nTahseen Yasmin-: contact me on tahseenyasmin284@gmail.com\n\nDipanjali singh-: contact me on dipanjali9330@gmail.com"
+    text_frame=Frame(main_frame,bg="aquamarine",highlightbackground='black',highlightthickness=2)
+    text_frame.place(x=390,y=140,height=500,width=1000)
+    text_area=Text(text_frame,font="Helvetica 20",bg="aquamarine",relief=GROOVE,wrap=WORD)
+    text_area.place(x=200,y=10,width=590,height=450)
+    text_area.insert("1.0",text)
+    text_area.configure(state=DISABLED)
+
 
 def about_page():
     global main_frame
@@ -549,9 +556,24 @@ def about_page():
     main_frame.place(x=0,y=40,height=950,width=2000)
     toggle_menu_frame.lift()
     main_frame.propagate(False)
-    lb=Label(main_frame,text="anupama , dipanjali , tahseen ",font="Helvetica 25 bold")
-    lb.pack()
+    text_frame=Frame(main_frame,bg="aquamarine",highlightbackground='black',highlightthickness=2)
+    text_frame.place(x=390,y=140,height=500,width=1000)
+
+    # about image 
+    global about
+    about=Image.open("C:\programming\python\mj project\\TextTospeech\\About.png")
+    about=ImageTk.PhotoImage(about)
+    # text that need to be inserted
+    text="Anumpma Ghosh-:  Anumpma has develop the layout of the project the designing of front page and menubar.she has also developed the text to speech conversion.\n\n\nTahseen Yasmin-: she has contriubuted to design part with her creative ideas . she has developed the OCR page and contact page.\n\n\nDipanjali Singh-: she has developed the audiobook part and  the about page .she has contribted to design part with her ideas to the main developer of design layout."
    
+   # puting the image in text-frame
+    abouimg=Label(text_frame,image=about,bd=2,relief='solid')
+    abouimg.place(x=0,y=0)
+    text_area=Text(text_frame,font="Helvetica 15",bg="white",relief=GROOVE,wrap=WORD)
+    text_area.place(x=300,y=10,width=590,height=450)
+    text_area.insert("1.0",text)
+    text_area.configure(state=DISABLED)
+
  
 
 def toggle_menu():
@@ -568,8 +590,8 @@ def toggle_menu():
 
     def hide_indicator():
         home_indicate.config(bg='grey')
-        handwritten_indicate.config(bg='grey')
-        login_indicate.config(bg='grey')
+        audiob_indicate.config(bg='grey')
+        Ocr_indicate.config(bg='grey')
         contact_indicate.config(bg='grey')
         about_indicate.config(bg='grey')
 
@@ -581,7 +603,7 @@ def toggle_menu():
     # home icon and button config
     global home_icon
     global home_icon1
-    home_icon=Image.open("C:\programming\python\mj project\\ttsproject1\icons8-home-50.png")
+    home_icon=Image.open("C:\programming\python\mj project\\TextTospeech\icons8-home-50.png")
     home_icon1=ImageTk.PhotoImage(home_icon)
     home_btn=Button(toggle_menu_frame,image=home_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(home_indicate,home_page))
     home_btn.place(x=70,y=20)
@@ -591,32 +613,32 @@ def toggle_menu():
     home_indicate.place(x=10,y=25,width=5,height=40)
     #
     #hand icon and button config
-    global handwritten_icon
-    global handwritten_icon1
-    handwritten_icon=Image.open("C:\programming\python\mj project\\ttsproject1\handwriting.png")
-    handwritten_icon=handwritten_icon.resize((50,50))
-    handwritten_icon1=ImageTk.PhotoImage(handwritten_icon)
-    handwritten_btn=Button(toggle_menu_frame,image=handwritten_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(handwritten_indicate,handwritten_page))
-    handwritten_btn.place(x=70,y=100)
+    global audiob_icon
+    global audiob_icon1
+    audiob_icon=Image.open("C:\programming\python\mj project\\TextTospeech\\audiob.png")
+    audiob_icon=audiob_icon.resize((50,50))
+    audiob_icon1=ImageTk.PhotoImage(audiob_icon)
+    audiob_btn=Button(toggle_menu_frame,image=audiob_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(audiob_indicate,audiob_page))
+    audiob_btn.place(x=70,y=100)
     # indicator which is gray and would become blue
-    handwritten_indicate=Label(toggle_menu_frame,text='',bg='grey')
-    handwritten_indicate.place(x=10,y=105,width=5,height=40)
+    audiob_indicate=Label(toggle_menu_frame,text='',bg='grey')
+    audiob_indicate.place(x=10,y=105,width=5,height=40)
     #
-    # login icon and button config
-    global login_icon
-    global login_icon1
-    login_icon=Image.open("C:\programming\python\mj project\\ttsproject1\login.png")
-    login_icon=login_icon.resize((50,50))
-    login_icon1=ImageTk.PhotoImage(login_icon)
-    login_btn=Button(toggle_menu_frame,image=login_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(login_indicate,login_page))
-    login_btn.place(x=70,y=180)
-    login_indicate=Label(toggle_menu_frame,text='',bg='grey')
-    login_indicate.place(x=10,y=185,width=5,height=40)
+    # Ocr icon and button config
+    global Ocr_icon
+    global Ocr_icon1
+    Ocr_icon=Image.open("C:\programming\python\mj project\\TextTospeech\Ocr.png")
+    Ocr_icon=Ocr_icon.resize((50,50))
+    Ocr_icon1=ImageTk.PhotoImage(Ocr_icon)
+    Ocr_btn=Button(toggle_menu_frame,image=Ocr_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(Ocr_indicate,Ocr_page))
+    Ocr_btn.place(x=70,y=180)
+    Ocr_indicate=Label(toggle_menu_frame,text='',bg='grey')
+    Ocr_indicate.place(x=10,y=185,width=5,height=40)
     #
     #contact icon and button config
     global contact_icon
     global contact_icon1
-    contact_icon=Image.open("C:\programming\python\mj project\\ttsproject1\communicate.png")
+    contact_icon=Image.open("C:\programming\python\mj project\\TextTospeech\communicate.png")
     contact_icon=contact_icon.resize((50,50))
     contact_icon1=ImageTk.PhotoImage(contact_icon)
     contact_btn=Button(toggle_menu_frame,image=contact_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(contact_indicate,contact_page))
@@ -627,7 +649,7 @@ def toggle_menu():
     #about icon and button config
     global about_icon
     global about_icon1
-    about_icon=Image.open("C:\programming\python\mj project\\ttsproject1\information.png")
+    about_icon=Image.open("C:\programming\python\mj project\\TextTospeech\information.png")
     about_icon=about_icon.resize((50,50))
     about_icon1=ImageTk.PhotoImage(about_icon)
     about_btn=Button(toggle_menu_frame,image=about_icon1,font="Helvetica 25 bold",bd=0,bg='grey',fg='white',command=lambda:indicate(about_indicate,about_page))
@@ -660,11 +682,11 @@ head_frame.configure(height=50)
 
 
 #taking window exit confermation
-#def confirm_exit():
-    #result=messagebox.askokcancel(title="Exit",message="Do you want to exit ?")
-    #if result:
-        #root.destroy()
+def confirm_exit():
+    result=messagebox.askokcancel(title="Exit",message="Do you want to exit ?")
+    if result:
+        root.destroy()
 
-#root.protocol("WM_DELETE_WINDOW", confirm_exit)
+root.protocol("WM_DELETE_WINDOW", confirm_exit)
 #
 root.mainloop()
